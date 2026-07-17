@@ -30,7 +30,10 @@ def get_weather() -> None:
         temp_c = data["current"]["temp_c"]
         condition = data["current"]["condition"]["text"]
 
-        print(f"{location}/{country} {local_time} Weather: {temp_c} Celsius, {condition}")
+        print(
+            f"{location}/{country} {local_time} "
+            f"Weather: {temp_c} Celsius, {condition}"
+        )
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
